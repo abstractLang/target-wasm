@@ -23,9 +23,19 @@ public class Module : IModule
                 TargetIdentifier = "wasm",
                 
                 LanguageOutput = new BetaOutputConfiguration() {
+                    BakeGenerics = true,
+                    MemoryUnit = 8,
+                    
                     EnabledOpcodes = BetaIsa.None
                         | BetaIsa.Dup
                         | BetaIsa.Swap,
+                    
+                    EnabledScopes = BetaExtendableScopes.None
+                        | BetaExtendableScopes.Block
+                        | BetaExtendableScopes.IfElse
+                        | BetaExtendableScopes.Loop
+                        | BetaExtendableScopes.Switch,
+                    
                     SizedOperations = false,
                 }
             }
