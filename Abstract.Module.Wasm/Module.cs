@@ -36,7 +36,8 @@ public class Module : IModule
                         | BetaExtendableScopes.Loop
                         | BetaExtendableScopes.Switch,
                     
-                    SizedOperations = false,
+                    SizedOperations = BetaSizedOperationsOptions.None
+                        | BetaSizedOperationsOptions.IntegerSigness,
                 }
             }
         ]
