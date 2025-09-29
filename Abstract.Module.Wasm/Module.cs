@@ -25,6 +25,7 @@ public class Module : IModule
                 LanguageOutput = new BetaOutputConfiguration() {
                     BakeGenerics = true,
                     MemoryUnit = 8,
+                    IptrSize = 32,
                     
                     EnabledOpcodes = BetaIsa.None
                         | BetaIsa.Dup
@@ -38,6 +39,9 @@ public class Module : IModule
                     
                     SizedOperations = BetaSizedOperationsOptions.None
                         | BetaSizedOperationsOptions.IntegerSigness,
+                    
+                    LocalStores = BetaDataKinds.Primitives,
+                    UseMemoryStack = true,
                 }
             }
         ]
