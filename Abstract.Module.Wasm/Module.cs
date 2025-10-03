@@ -25,7 +25,7 @@ public class Module : IModule
                 LanguageOutput = new BetaOutputConfiguration() {
                     BakeGenerics = true,
                     MemoryUnit = 8,
-                    IptrSize = 32,
+                    NativeIntegerSize = 32,
                     
                     EnabledOpcodes = BetaIsa.None
                         | BetaIsa.Dup
